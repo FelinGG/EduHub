@@ -7,48 +7,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../../assets/css/global.css">
     <style>
-        /* Nadpisujemy akcenty dla matematyki, jeśli nie ma ich w global.css */
-        :root {
-            --accent-math: #4361ee;
-            --math-bg-soft: rgba(67, 97, 238, 0.05);
-        }
-
-        .nav-link:hover {
-            background: var(--math-bg-soft);
-            color: var(--accent-math);
-        }
-
-        .math-badge {
-            background: var(--accent-math);
-            color: white;
-            padding: 4px 12px;
-            border-radius: 8px;
-            font-size: 0.75rem;
-            font-weight: 800;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            display: inline-block;
-        }
-
-        .topic-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .topic-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 20px;
-            border: 1px solid #edf2f7;
-            transition: var(--transition);
-        }
-
-        .topic-card:hover {
-            border-color: var(--accent-math);
-            transform: translateY(-5px);
-        }
+        .math-accent { color: var(--accent-math); font-weight: 800; text-transform: uppercase; }
+        .nav-link:hover { color: var(--accent-math); background: #f0f4ff; }
     </style>
 </head>
 <body>
@@ -59,25 +19,16 @@
     <nav class="sidebar" id="sidebar">
         <div class="nav-section">
             <h3>Działy i Teoria</h3>
-            <a href="#" class="nav-link">📐 Funkcje i Wykresy</a>
-            <a href="#" class="nav-link">🔢 Ciągi Liczbowe</a>
-            <a href="#" class="nav-link">📉 Rachunek Prawdopodobieństwa</a>
+            <a href="#" class="nav-link">📐 Funkcje</a>
+            <a href="#" class="nav-link">🔢 Ciągi</a>
             <a href="#" class="nav-link">🧊 Stereometria</a>
         </div>
-
         <div class="nav-section">
-            <h3>Praktyka</h3>
+            <h3>Egzamin</h3>
             <a href="#" class="nav-link">📝 Zadania Pewniaki</a>
-            <a href="#" class="nav-link">⏱️ Arkusze Formuła 2023</a>
-            <a href="#" class="nav-link">🧮 Tablice Matematyczne</a>
+            <a href="#" class="nav-link">⏱️ Arkusze</a>
+            <a href="#" class="nav-link">🧮 Tablice</a>
         </div>
-
-        <div class="nav-section">
-            <h3>Narzędzia</h3>
-            <a href="https://www.desmos.com/calculator" target="_blank" class="nav-link">🔗 Kalkulator Graficzny</a>
-            <a href="https://www.wolframalpha.com" target="_blank" class="nav-link">🔗 WolframAlpha</a>
-        </div>
-
         <div style="margin-top: auto;">
             <a href="../../index.html" class="nav-link" style="color: #94a3b8;">🏠 Powrót do HUBa</a>
         </div>
@@ -85,37 +36,26 @@
 
     <main class="container">
         <div class="page-header">
-            <span class="math-badge">Przedmiot Ścisły</span>
+            <span class="math-accent">Przedmiot</span>
             <h1 style="font-size: 3.5rem; font-weight: 800; letter-spacing: -2px;">Matematyka</h1>
             <p style="font-size: 1.2rem; color: var(--text-muted); margin-top: 1rem;">
-                Od logarytmów po pochodne. Wszystko, czego potrzebujesz, by zdać maturę bez stresu.
+                Zrozum, a nie wykuj. Skuteczne metody na maturę z matematyki.
             </p>
         </div>
 
         <section class="content-card">
-            <h2>Witaj w sekcji matematycznej!</h2>
-            <p>Nie musisz liczyć wszystkiego na piechotę. Skupiamy się na schematach rozwiązywania zadań, które powtarzają się co roku na arkuszach CKE.</p>
+            <h2>Twoja droga do 100%</h2>
+            <p>Matematyka to zestaw reguł. Jeśli opanujesz kluczowe schematy z naszych "Zadań Pewniaków", żaden arkusz Cię nie zaskoczy.</p>
         </section>
 
-        <h3 style="margin-top: 3rem;">Popularne działy:</h3>
-        <div class="topic-grid">
-            <div class="topic-card">
-                <h4>Funkcja Kwadratowa</h4>
-                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Delta, wierzchołek i postać kanoniczna w pigułce.</p>
-            </div>
-            <div class="topic-card">
-                <h4>Geometria Analityczna</h4>
-                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Równania prostej, odległości punktów i okręgi.</p>
-            </div>
-            <div class="topic-card">
-                <h4>Trygonometria</h4>
-                <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.5rem;">Wykresy sin/cos i najważniejsze tożsamości.</p>
-            </div>
-        </div>
-
-        <section class="content-card" style="margin-top: 3rem; border-left: 4px solid var(--accent-math);">
-            <h3>💡 Polecane zasoby:</h3>
-            <p>Zajrzyj do sekcji <strong>"Zadania Pewniaki"</strong> w menu, aby zobaczyć 10 typów zadań, które pojawiają się na 90% arkuszy z ostatnich lat.</p>
+        <section class="content-card" style="border-left: 4px solid var(--accent-math);">
+            <h3>📊 Dzisiaj powtórz:</h3>
+            <p>Polecane działy na podstawie statystyk CKE:</p>
+            <ul style="margin: 1rem 0 0 1.5rem;">
+                <li>Funkcja kwadratowa i liniowa</li>
+                <li>Geometria analityczna (proste i punkty)</li>
+                <li>Prawdopodobieństwo</li>
+            </ul>
         </section>
     </main>
 

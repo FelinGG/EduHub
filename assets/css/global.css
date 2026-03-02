@@ -1,45 +1,81 @@
 :root {
+    --bg-gradient: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     --accent-polish: #ef233c;
     --accent-math: #4361ee;
-    --bg-light: #f8f9fa;
     --text-dark: #1d1d1f;
+    --text-muted: #636e72;
     --sidebar-width: 300px;
     --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --card-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
-body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--bg-light);
-    color: var(--text-dark);
-    margin: 0;
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    background: #f8f9fa; 
+    color: var(--text-dark); 
+    line-height: 1.6;
 }
 
 /* Sidebar & Navigation */
 .sidebar {
     position: fixed; top: 0; left: calc(-1 * var(--sidebar-width));
-    width: var(--sidebar-width); height: 100vh;
-    background: white; z-index: 1000; padding: 80px 1.5rem 2rem;
-    box-shadow: 10px 0 30px rgba(0,0,0,0.05); transition: var(--transition);
+    width: var(--sidebar-width); height: 100vh; background: white;
+    z-index: 1000; padding: 80px 1.5rem 2rem; transition: var(--transition);
+    display: flex; flex-direction: column; box-shadow: 10px 0 30px rgba(0,0,0,0.05);
+    overflow-y: auto;
 }
+
 .sidebar.active { left: 0; }
+
 .overlay {
     position: fixed; inset: 0; background: rgba(0,0,0,0.3);
-    backdrop-filter: blur(4px); z-index: 999;
-    opacity: 0; visibility: hidden; transition: var(--transition);
+    backdrop-filter: blur(4px); z-index: 999; opacity: 0; visibility: hidden; transition: var(--transition);
 }
+
 .overlay.active { opacity: 1; visibility: visible; }
 
 .menu-toggle {
     position: fixed; top: 20px; left: 20px; z-index: 1001;
     background: white; border: none; width: 50px; height: 50px;
-    border-radius: 12px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 12px; cursor: pointer; box-shadow: 0 4px 12px rgba(0,0,0,0.1); font-size: 1.5rem;
+    display: flex; align-items: center; justify-content: center;
 }
 
-.nav-section h3 { font-size: 0.7rem; color: #adb5bd; text-transform: uppercase; margin: 1.5rem 0 0.5rem; }
-.nav-link { display: block; padding: 0.7rem; text-decoration: none; color: var(--text-dark); font-weight: 600; border-radius: 8px; }
-.nav-link:hover { background: #fff5f6; color: var(--accent-polish); }
+/* Dropdown Logic */
+.dropdown-container { width: 100%; margin-bottom: 0.5rem; }
 
-/* Main Content */
-.container { padding: 100px 2rem 50px; max-width: 900px; margin: 0 auto; }
-.page-header { margin-bottom: 3rem; }
-.content-card { background: white; padding: 2rem; border-radius: 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.05); margin-bottom: 1.5rem; }
+.dropdown-btn {
+    width: 100%; display: flex; align-items: center; justify-content: space-between;
+    padding: 0.8rem 1rem; background: none; border: none; 
+    font-family: inherit; font-size: 1rem; font-weight: 600; color: var(--text-dark);
+    cursor: pointer; border-radius: 12px; transition: var(--transition);
+}
+
+.dropdown-btn:hover { background: #f1f2f6; }
+
+.dropdown-content {
+    max-height: 0; overflow: hidden; transition: all 0.5s ease-in-out;
+    padding-left: 1rem; background: #fafafa; border-radius: 0 0 12px 12px;
+}
+
+.dropdown-content.show { max-height: 500px; padding-bottom: 0.5rem; }
+
+.dropdown-link {
+    display: block; padding: 0.6rem 1rem; text-decoration: none;
+    color: var(--text-muted); font-size: 0.9rem; font-weight: 500;
+    transition: 0.2s; border-radius: 8px;
+}
+
+.dropdown-link:hover { color: var(--accent-polish); background: #fff5f6; padding-left: 1.5rem; }
+
+.arrow { font-size: 0.8rem; transition: transform 0.3s; }
+.rotate { transform: rotate(180deg); }
+
+/* Layout Elements */
+.container { max-width: 900px; margin: 0 auto; padding: 100px 2rem 50px; }
+.nav-section h3 { font-size: 0.7rem; text-transform: uppercase; color: #b2bec3; margin: 1.5rem 0 0.5rem; letter-spacing: 1px; }
+.nav-link { display: block; padding: 0.8rem 1rem; text-decoration: none; color: var(--text-dark); font-weight: 600; border-radius: 12px; transition: 0.2s; }
+.nav-link:hover { background: #f1f2f6; transform: translateX(5px); }
+.content-card { background: white; padding: 2.5rem; border-radius: 24px; box-shadow: var(--card-shadow); margin-bottom: 2rem; }

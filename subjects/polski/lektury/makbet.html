@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Makbet - William Szekspir | EduHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/css/global.css">
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="overlay" onclick="toggleMenu()"></div>
+    
+    <nav class="sidebar" id="sidebar">
+        <div class="nav-section">
+            <h3>Lektury i Motywy</h3>
+            <div class="dropdown-container">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    <span>🔥 Top 5 Lektur</span>
+                    <span class="arrow" id="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-content show" id="top5-menu">
+                    <a href="lalka.html" class="dropdown-link">Lalka</a>
+                    <a href="dziady.html" class="dropdown-link">Dziady cz. III</a>
+                    <a href="pantadeusz.html" class="dropdown-link">Pan Tadeusz</a>
+                    <a href="wesele.html" class="dropdown-link">Wesele</a>
+                    <a href="makbet.html" class="dropdown-link" style="color: var(--accent-polish); font-weight: 800; background: #fff5f6;">Makbet</a>
+                    <a href="dzuma.html" class="dropdown-link">Dżuma</a>
+                </div>
+            </div>
+            <a href="lista.html" class="nav-link">📚 Lista Lektur</a>
+            <a href="motywy.html" class="nav-link">🎭 Motywy</a>
+        </div>
+        <div class="nav-section">
+            <h3>Warsztat</h3>
+            <a href="../warsztat/rozprawka.html" class="nav-link">✍️ Rozprawka</a>
+            <a href="../warsztat/notatka.html" class="nav-link">📝 Notatka</a>
+        </div>
+        <div style="margin-top: auto;"><a href="../../../index.html" class="nav-link" style="color: #94a3b8;">🏠 Powrót do HUBa</a></div>
+    </nav>
+
+    <main class="container">
+        <div class="content-card">
+            <h1>Makbet – William Szekspir</h1>
+            <p><strong>Epoka:</strong> Renesans | <strong>Gatunek:</strong> Tragedia</p>
+            <hr style="margin: 1.5rem 0;">
+            <h3>Streszczenie</h3>
+            <p>Studium żądzy władzy. Makbet pod wpływem przepowiedni zabija króla i wpada w spiralę zbrodni, tracąc przy tym spokój i duszę.</p>
+        </div>
+    </main>
+    <script src="../../../assets/js/menu.js"></script>
+</body>
+</html>

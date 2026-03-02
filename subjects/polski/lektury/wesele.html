@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wesele - Stanisław Wyspiański | EduHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../../assets/css/global.css">
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="overlay" onclick="toggleMenu()"></div>
+    
+    <nav class="sidebar" id="sidebar">
+        <div class="nav-section">
+            <h3>Lektury i Motywy</h3>
+            <div class="dropdown-container">
+                <button class="dropdown-btn" onclick="toggleDropdown()">
+                    <span>🔥 Top 5 Lektur</span>
+                    <span class="arrow" id="dropdown-arrow">▼</span>
+                </button>
+                <div class="dropdown-content show" id="top5-menu">
+                    <a href="lalka.html" class="dropdown-link">Lalka</a>
+                    <a href="dziady.html" class="dropdown-link">Dziady cz. III</a>
+                    <a href="pantadeusz.html" class="dropdown-link">Pan Tadeusz</a>
+                    <a href="wesele.html" class="dropdown-link" style="color: var(--accent-polish); font-weight: 800; background: #fff5f6;">Wesele</a>
+                    <a href="makbet.html" class="dropdown-link">Makbet</a>
+                    <a href="dzuma.html" class="dropdown-link">Dżuma</a>
+                </div>
+            </div>
+            <a href="lista.html" class="nav-link">📚 Lista Lektur</a>
+            <a href="motywy.html" class="nav-link">🎭 Motywy</a>
+        </div>
+        <div class="nav-section">
+            <h3>Warsztat</h3>
+            <a href="../warsztat/rozprawka.html" class="nav-link">✍️ Rozprawka</a>
+            <a href="../warsztat/notatka.html" class="nav-link">📝 Notatka</a>
+        </div>
+        <div style="margin-top: auto;">
+            <a href="../../../index.html" class="nav-link" style="color: #94a3b8;">🏠 Powrót do HUBa</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <div class="content-card">
+            <span class="category-tag">Młoda Polska</span>
+            <h1>Wesele</h1>
+            <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Stanisław Wyspiański</p>
+            <hr style="margin-bottom: 2rem; border: 0; border-top: 1px solid #eee;">
+
+            <section>
+                <h2>📝 Profesjonalne Streszczenie</h2>
+                <p>Akcja dramatu oparta jest na rzeczywistym wydarzeniu – weselu Lucjana Rydla z Jadwigą Mikołajczykówną w 1900 roku. Utwór dzieli się na warstwę realistyczną (rozmowy gości weselnych) oraz fantastyczną (pojawienie się osób dramatu). Wyspiański dokonuje brutalnej oceny polskiego społeczeństwa, konfrontując ze sobą <strong>inteligencję</strong> (dekadencką, bierną, uciekającą w chłopomanię) oraz <strong>chłopstwo</strong> (potężną siłę, ale pozbawioną świadomego przywództwa). Punktem kulminacyjnym jest wezwanie do powstania przez Wernyhorę, które kończy się klęską przez pijaństwo, prywatę i brak porozumienia między klasami.</p>
+            </section>
+
+            <section style="margin-top: 2rem;">
+                <h2>🔮 Kluczowe Symbole (Matura)</h2>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; margin-top: 1rem;">
+                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 12px; border-left: 4px solid var(--accent-polish);">
+                        <strong>Złoty Róg</strong><br>Sygnał do walki, wielka idea jednocząca naród.
+                    </div>
+                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 12px; border-left: 4px solid var(--accent-polish);">
+                        <strong>Czapka z piór</strong><br>Prywata, egoizm, przywiązanie do błahostek.
+                    </div>
+                    <div style="background: #f8f9fa; padding: 1rem; border-radius: 12px; border-left: 4px solid var(--accent-polish);">
+                        <strong>Chocholi Taniec</strong><br>Marazm, uśpienie narodu, bierność.
+                    </div>
+                </div>
+            </section>
+
+            <section style="margin-top: 2rem;">
+                <h2>✍️ Argumenty do rozprawki</h2>
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 1rem; padding: 1rem; background: rgba(239, 35, 60, 0.05); border-radius: 12px;">
+                        <strong>1. Mit zgody narodowej:</strong> Wyspiański pokazuje, że "bratanie się" inteligencji z ludem jest pozorne. Obie grupy żyją w różnych światach i nie są w stanie wspólnie działać.
+                    </li>
+                    <li style="margin-bottom: 1rem; padding: 1rem; background: rgba(239, 35, 60, 0.05); border-radius: 12px;">
+                        <strong>2. Krytyka inteligencji:</strong> Poeta ukazuje przedstawicieli elit jako ludzi ogarniętych niemocą (tzw. "paraliż woli"), którzy potrafią pięknie mówić o ojczyźnie, ale boją się realnego czynu.
+                    </li>
+                </ul>
+            </section>
+        </div>
+    </main>
+
+    <script src="../../../assets/js/menu.js"></script>
+</body>
+</html>
