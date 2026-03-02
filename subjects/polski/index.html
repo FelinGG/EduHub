@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Język Polski | EduHub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../../assets/css/global.css">
+</head>
+<body>
+    <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    <div class="overlay" onclick="toggleMenu()"></div>
+
+    <nav class="sidebar" id="sidebar">
+        <div class="nav-section">
+            <h3>Lektury i Motywy</h3>
+            <a href="lektury/lista.html" class="nav-link">📚 Lista Lektur</a>
+            <a href="lektury/motywy.html" class="nav-link">🎭 Motywy</a>
+            <a href="lektury/top5.html" class="nav-link">🔥 Top 5 Lektur</a>
+        </div>
+        <div class="nav-section">
+            <h3>Warsztat</h3>
+            <a href="warsztat/rozprawka.html" class="nav-link">✍️ Rozprawka</a>
+            <a href="warsztat/notatka.html" class="nav-link">📝 Notatka</a>
+            <a href="warsztat/analiza.html" class="nav-link">🧐 Analiza Wiersza</a>
+        </div>
+        <div class="nav-section">
+            <h3>Egzamin</h3>
+            <a href="egzamin/ustna.html" class="nav-link">📋 Matura Ustna</a>
+            <a href="egzamin/arkusze.html" class="nav-link">⏱️ Arkusze</a>
+            <a href="egzamin/epoki.html" class="nav-link">⌛ Epoki</a>
+        </div>
+        <a href="../../index.html" class="nav-link" style="margin-top: auto; color: #999;">🏠 Powrót do HUBa</a>
+    </nav>
+
+    <main class="container">
+        <div class="page-header">
+            <span style="color: var(--accent-polish); font-weight: 800; text-transform: uppercase;">Przedmiot</span>
+            <h1 style="font-size: 3.5rem; font-weight: 800;">Język Polski</h1>
+        </div>
+
+        <section class="content-card">
+            <h2>Witaj w sekcji humanistycznej!</h2>
+            <p>Przygotowaliśmy dla Ciebie komplet materiałów. Skupiamy się na konkretach, które pomogą Ci zdobyć 100% z wypracowania i matury ustnej.</p>
+        </section>
+
+        <section class="content-card" style="border-left: 4px solid var(--accent-polish);">
+            <h3>🚀 Polecane na start:</h3>
+            <ul style="margin-top: 1rem; list-style: none;">
+                <li>👉 <strong>TOP 5 Lektur:</strong> Co musisz znać na wyrywki.</li>
+                <li>👉 <strong>Szablon Rozprawki:</strong> Gotowe zwroty do użycia.</li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="../../assets/js/menu.js"></script>
+</body>
+</html>
